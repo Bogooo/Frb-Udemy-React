@@ -1,7 +1,8 @@
 import {useState} from "react";
-
+import useBooksContext from "../hooks/useBooksContext";
 function BookEdit({book,onSubmit}){
 
+    const  {editById}=useBooksContext();
     const [title,setTitle]=useState(book.title);
 
     const handleChange=(event)=>{
@@ -10,7 +11,8 @@ function BookEdit({book,onSubmit}){
 
     const handleSubmit=(event)=>{
         event.preventDefault();
-        onSubmit(book.id,title);
+        onSubmit();
+        editById(book.id,title);
     }
 
     return (<form className="book-edit" onSubmit={handleSubmit}>
