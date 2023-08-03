@@ -1,22 +1,24 @@
-import DropDown from "./components/DropDown";
-import {useState} from "react";
-
+import Route from "./components/Route";
+import AcordianPage from "./pages/AcordianPage";
+import DropDownPage from "./pages/DropDownPage";
+import ButtonPage from "./pages/ButtonPage";
+import Sidebar from "./components/Sidebar";
 function App(){
 
-    const [selection,isSelection]=useState(null);
-
-    const handleSelect=(option)=>{
-      isSelection(option);
-    };
-
-    const options= [
-        {label:'Red' , value: 'red'},
-        {label:'Green' , value: 'green'},
-        {label:'Blue' , value: 'blue'},
-        {label:'Yellow' , value: 'yellow'},
-    ];
-
-    return <DropDown value={selection} options={options} onChange={handleSelect}/>
+return (<div className="container mx-auto grid grid-cols-6 gap-4 mt-4">
+    <Sidebar/>
+    <div className="col-span-5">
+        <Route path="/accordion">
+            <AcordianPage/>
+        </Route>
+        <Route path="/dropdown">
+            <DropDownPage/>
+        </Route>
+        <Route path="/buttons">
+            <ButtonPage/>
+        </Route>
+    </div>
+</div>);
 }
 
 export default App;
