@@ -6,6 +6,7 @@ import Sidebar from "./components/Sidebar";
 import ModalPage from "./pages/ModalPage";
 import TablePage from "./pages/TablePage";
 import CounterPage from "./pages/CounterPage";
+import Dummy from "./components/Dummy";
 function App(){
 
 return (<div className="container mx-auto grid grid-cols-6 gap-4 mt-4">
@@ -30,6 +31,7 @@ return (<div className="container mx-auto grid grid-cols-6 gap-4 mt-4">
             <CounterPage initialCount={0}/>
         </Route>
     </div>
+    <Dummy/>
 </div>);
 }
 
