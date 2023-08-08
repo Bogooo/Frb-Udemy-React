@@ -1,0 +1,30 @@
+{
+  "users": [
+    {
+      "name": "Devin Tremblay II",
+      "id": 2
+    },
+    {
+      "name": "Dave Mayert",
+      "id": 3
+    },
+    {
+      "name": "Emilio McKenzie",
+      "id": 4
+    },
+    {
+      "name": "Naomi King",
+      "id": 5
+    },
+    {
+      "name": "Dennis Waters I",
+      "id": 6
+    },
+    {
+      "name": "Ryan Hane",
+      "id": 7
+    }
+  ],
+  "albums": [],
+  "photos": []
+}
