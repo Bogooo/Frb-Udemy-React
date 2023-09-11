@@ -11,9 +11,10 @@ function UsersList() {
     const [doFetchUsers,isLoadingUsers,loadingUsersError]=useThunk(fetchUsers);
     const [doAddUser,isCreatingUser,creatingUserError]=useThunk(addUser);
     const {data} = useSelector((state) => {
-        return state.users; // {data , isLoading , error }
+        return state; // {data , isLoading , error }
     });
 
+    console.log(data.album);
     useEffect(() => {
         doFetchUsers();
     }, [doFetchUsers]);
